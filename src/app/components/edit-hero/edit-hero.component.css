@@ -1,0 +1,5 @@
+/*I just add this and it work, add padding between buttons. I didnt add this it button*/
+.mat-mdc-button-base { 
+    margin: 8px 8px 8px 0;
+  }
+  

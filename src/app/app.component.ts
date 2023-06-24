@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'AngularSuperHero.UI';
   heroes: SuperHero[]=[];
   heroToEdit?: SuperHero; //new 
+  columnsToDisplay=[`name`,`firstName`,`lastName`,`place`,`button`]; //our data which will be show on the page? button its colour for button
+
   constructor(private superHeroService: SuperHeroService){}
 
   ngOnInit(): void {

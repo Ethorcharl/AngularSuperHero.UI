@@ -1,22 +1,35 @@
 <div *ngIf="hero">
+    <mat-card>
+    <mat-card-content>
     <h2> {{ hero.name }} </h2>
     <div>
-        Name:
-        <input [(ngModel)]="hero.name" placeholder="Name"/> <!--in app.module.ts added imports: FormsModule-->
+        <mat-form-field>
+            <mat-label>Name:</mat-label>
+        <input matInput [(ngModel)]="hero.name" placeholder="Name"/> <!--in app.module.ts added imports: FormsModule-->
+    </mat-form-field>
     </div>
     <div>
-        First Name:
-        <input [(ngModel)]="hero.firstName" placeholder="firstName"/>
+        <mat-form-field>
+            <mat-label>First Name:</mat-label>
+        <input matInput [(ngModel)]="hero.firstName" placeholder="firstName"/>
+    </mat-form-field>
     </div>
     <div>
-        Last Name:
-        <input [(ngModel)]="hero.lastName" placeholder="lastName"/>
+
+        <mat-form-field>
+            <mat-label>Last Name:</mat-label>
+        <input matInput [(ngModel)]="hero.lastName" placeholder="lastName"/>
+    </mat-form-field>
     </div>
     <div>
-        Place:
-        <input [(ngModel)]="hero.place" placeholder="place"/>
+        <mat-form-field>
+            <mat-label>Place:</mat-label>
+        <input matInput [(ngModel)]="hero.place" placeholder="place"/>
+    </mat-form-field>
     </div>
-    <button (click)="updateHero(hero)" *ngIf="hero.id">Save</button> <!--id can be 0, so when button will be hidden-->
-    <button (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button> 
-    <button (click)="createHero(hero)" *ngIf="!hero.id">Create</button> <!--!hero check if form have id-->
+    <button mat-stroked-button color="primary" (click)="updateHero(hero)" *ngIf="hero.id">Save</button> <!--id can be 0, so when button will be hidden-->
+    <button mat-stroked-button color="secondary" (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button> 
+    <button mat-stroked-button color="primary" (click)="createHero(hero)" *ngIf="!hero.id">Create</button> <!--!hero check if form have id-->
+</mat-card-content>
+</mat-card>
 </div>
